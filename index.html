@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <main class="main">
+
+      <div class="main__card main__card_personal card-personal">
+        <div class="card-personal__personal-info">
+          <img src="./images/image-jeremy.png" alt=" " draggable="false" class="card-personal__img">
+          <div>
+            <span class="card-personal__report">Report for</span>
+            <br>
+            <span class="card-personal__name">Jeremy Robson</span>
+          </div>
+        </div>
+
+        <ul id="filters" class="card-personal__filters">
+          <li><button id="filterBtn" class="active">Daily</button></li>
+          <li><button id="filterBtn">Weekly</button></li>
+          <li><button id="filterBtn">Monthly</button></li>
+        </ul>
+
+      </div>
+
+      <div class="main__card card-work">
+        <div>
+          <div class="card__header"><span class="header__text">Work</span> <span class="additional"></span></div>
+          <span class="card__current-hours">5hrs</span>
+          <span class="card__previous-hours">Previous - 7hrs</span>
+        </div>
+      </div>
+
+      <div class="main__card card-play">
+        <div>
+          <div class="card__header"><span class="header__text">Play</span> <span class="additional"></span></div>
+          <span class="card__current-hours">1hr</span>
+          <span class="card__previous-hours">Previous - 2hrs</span>
+        </div>
+      </div>
+
+      <div class="main__card card-study">
+        <div>
+          <div class="card__header"><span class="header__text">Study</span> <span class="additional"></span></div>
+          <span class="card__current-hours">0hrs</span>
+          <span class="card__previous-hours">Previous - 1hr</span>
+        </div>
+      </div>
+
+      <div class="main__card card-exercise">
+        <div>
+          <div class="card__header"><span class="header__text">Exercise</span> <span class="additional"></span></div>
+          <span class="card__current-hours"> 1hr</span>
+          <span class="card__previous-hours">Previous - 1hr</span>
+        </div>
+      </div>
+
+      <div class="main__card card-social">
+        <div>
+          <div class="card__header"><span class="header__text">Social</span> <span class="additional"></span></div>
+          <span class="card__current-hours"> 1hr</span>
+          <span class="card__previous-hours">Previous - 3hr</span>
+        </div>
+      </div>
+
+      <div class="main__card card-self-care">
+        <div>
+          <div class="card__header"><span class="header__text"> Self Care</span> <span class="additional"></span></div>
+          <span class="card__current-hours"> 0hrs</span>
+          <span class="card__previous-hours">Previous - 1hr</span>
+        </div>
+      </div>
+
+    </main>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  <script src="./js/index.js"></script>
+</body>
+
+</html>

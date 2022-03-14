@@ -1,0 +1,203 @@
+* {
+  font-size: 18px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #fff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: #0f1424;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+  grid-gap: 30px;
+}
+
+.card-work {
+  background: url(../images/icon-work.svg) 90% -10px #ff8c66 no-repeat;
+}
+
+.card-play {
+  background: url(../images/icon-play.svg) 90% -10px #56c2e6 no-repeat;
+}
+
+.card-study {
+  background: url(../images/icon-study.svg) 90% -10px #ff5c7c no-repeat;
+}
+
+.card-exercise {
+  background: url(../images/icon-exercise.svg) 90% -10px #4acf81 no-repeat;
+}
+
+.card-social {
+  background: url(../images/icon-social.svg) 90% -10px #7536d3 no-repeat;
+}
+
+.card-self-care {
+  background: url(../images/icon-self-care.svg) 90% -10px #f1c65b no-repeat;
+}
+
+.main__card {
+  border-radius: 12px;
+  max-width: 260px;
+  height: 250px;
+}
+
+.main__card > div {
+  background-color: #1c1f4a;
+  padding: 36px;
+  height: 200px;
+  border-radius: 12px;
+  margin-top: 50px;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+}
+
+.main__card > div:hover {
+  background-color: #6f76c8;
+  cursor: pointer;
+}
+
+.main__card .card__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main__card .card__header .header__text {
+  font-weight: 500;
+  font-size: 22px;
+}
+
+.main__card .card__current-hours {
+  display: block;
+  font-size: 30px;
+  font-weight: 500;
+  margin: 25px 0;
+}
+
+.main__card .card__previous-hours {
+  color: #bdc1ff;
+}
+
+.main__card_personal {
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 3;
+  padding: 0;
+  background-color: #1c1f4a;
+  height: auto;
+}
+
+.main__card_personal .card-personal__personal-info {
+  background-color: #5847eb;
+  padding: 30px;
+  margin: 0;
+  height: auto;
+}
+
+.main__card_personal .card-personal__personal-info:hover {
+  background-color: #5847eb;
+  cursor: default;
+}
+
+.main__card_personal .card-personal__personal-info div {
+  margin: 40px 0 80px 0;
+}
+
+.main__card_personal .card-personal__personal-info .card-personal__name {
+  font-weight: 500;
+  font-size: 45px;
+}
+
+.main__card_personal .card-personal__personal-info .card-personal__report {
+  color: #bdc1ff;
+  font-weight: 500;
+}
+
+.main__card_personal .card-personal__img {
+  width: 90px;
+  height: 90px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+}
+
+.main__card_personal .card-personal__filters li {
+  list-style: none;
+  margin: 15px 0;
+}
+
+.main__card_personal .card-personal__filters button {
+  border: none;
+  background-color: inherit;
+  color: #bdc1ff;
+  cursor: pointer;
+}
+
+.main__card_personal .card-personal__filters button:hover {
+  color: #fff;
+}
+
+.main__card_personal .card-personal__filters button.active {
+  color: #fff;
+}
+
+.additional {
+  position: relative;
+  right: 8px;
+}
+
+.additional, .additional::after, .additional::before {
+  display: block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #bdc1ff;
+}
+
+.additional:hover, .additional::after:hover, .additional::before:hover {
+  background-color: #fff;
+}
+
+.additional::after {
+  content: "";
+  position: relative;
+  left: 8px;
+  top: -5px;
+}
+
+.additional::before {
+  content: "";
+  position: relative;
+  left: -8px;
+}
+/*# sourceMappingURL=styles.css.map */

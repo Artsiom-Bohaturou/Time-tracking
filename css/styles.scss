@@ -1,0 +1,184 @@
+$veryDarkblue: hsl(226, 43%, 10%);
+$blue: hsl(246, 80%, 60%);
+$paleBlue: hsl(236, 100%, 87%);
+$darkBlue: hsl(235, 46%, 20%);
+$hoverDarkBlue: hsl(235, 45%, 61%);
+$cards: (
+    "work": hsl(15, 100%, 70%),
+    "play": hsl(195, 74%, 62%),
+    "study": hsl(348, 100%, 68%),
+    "exercise": hsl(145, 58%, 55%),
+    "social": hsl(264, 64%, 52%),
+    "self-care": hsl(43, 84%, 65%),
+);
+
+* {
+    font-size: 18px;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    background-color: $veryDarkblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 30px;
+}
+
+@each $name, $color in $cards {
+    .card-#{$name} {
+        background: url(../images/icon-#{$name}.svg) 90% -10px #{$color} no-repeat;
+    }
+}
+
+.main__card {
+    border-radius: 12px;
+    max-width: 260px;
+    height: 250px;
+
+    & > div {
+        background-color: $darkBlue;
+        padding: 36px;
+        height: 200px;
+        border-radius: 12px;
+        margin-top: 50px;
+        transition: 0.25s;
+
+        &:hover {
+            background-color: $hoverDarkBlue;
+            cursor: pointer;
+        }
+    }
+
+    & .card__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & .header__text {
+            font-weight: 500;
+            font-size: 22px;
+        }
+    }
+
+    & .card__current-hours {
+        display: block;
+        font-size: 30px;
+        font-weight: 500;
+        margin: 25px 0;
+    }
+
+    & .card__previous-hours {
+        color: $paleBlue;
+    }
+}
+
+.main__card_personal {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    padding: 0;
+    background-color: $darkBlue;
+    height: auto;
+
+    & .card-personal__personal-info {
+        background-color: $blue;
+        padding: 30px;
+        margin: 0;
+        height: auto;
+
+        &:hover {
+            background-color: $blue;
+            cursor: default;
+        }
+
+        & div {
+            margin: 40px 0 80px 0;
+        }
+
+        & .card-personal__name {
+            font-weight: 500;
+            font-size: 45px;
+        }
+
+        & .card-personal__report {
+            color: $paleBlue;
+            font-weight: 500;
+        }
+    }
+
+    & .card-personal__img {
+        width: 90px;
+        height: 90px;
+        border: 3px solid #fff;
+        border-radius: 50%;
+    }
+
+    & .card-personal__filters {
+        li {
+            list-style: none;
+            margin: 15px 0;
+        }
+
+        button {
+            border: none;
+            background-color: inherit;
+            color: $paleBlue;
+            cursor: pointer;
+
+            &:hover {
+                color: #fff;
+            }
+
+            &.active {
+                color: #fff;
+            }
+        }
+    }
+}
+
+.additional {
+    position: relative;
+    right: 8px;
+
+    &,
+    &::after,
+    &::before {
+        display: block;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: $paleBlue;
+
+        &:hover {
+            background-color: #fff;
+        }
+    }
+
+    &::after {
+        content: "";
+        position: relative;
+        left: 8px;
+        top: -5px;
+    }
+
+    &::before {
+        content: "";
+        position: relative;
+        left: -8px;
+    }
+}
