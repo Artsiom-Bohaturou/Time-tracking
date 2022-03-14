@@ -9,6 +9,7 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  height: 100vh;
 }
 
 .wrapper {
@@ -199,5 +200,71 @@ body {
   content: "";
   position: relative;
   left: -8px;
+}
+
+.attribution {
+  position: absolute;
+}
+
+@media (max-width: 800px) {
+  .wrapper {
+    height: auto;
+    padding: 30px;
+  }
+  body {
+    overflow-y: auto;
+  }
+  .main {
+    -ms-grid-columns: 330px;
+        grid-template-columns: 330px;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+  }
+  .main__card {
+    max-width: 330px;
+    height: auto;
+  }
+  .main__card > div {
+    height: auto;
+  }
+  .main__card_personal .card-personal__personal-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 20px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .main__card_personal .card-personal__personal-info > div {
+    margin: 0;
+    height: auto;
+  }
+  .main__card_personal .card-personal__personal-info .card-personal__name {
+    font-size: 30px;
+  }
+  .main__card_personal .card-personal__filters {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-padding-start: 0;
+            padding-inline-start: 0;
+  }
+  .card__time-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

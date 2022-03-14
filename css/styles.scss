@@ -22,6 +22,7 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    height: 100vh;
 }
 
 .wrapper {
@@ -180,5 +181,64 @@ body {
         content: "";
         position: relative;
         left: -8px;
+    }
+}
+
+.attribution {
+    position: absolute;
+}
+
+@media (max-width: 800px) {
+    .wrapper {
+        height: auto;
+        padding: 30px;
+    }
+
+    body {
+        overflow-y: auto;
+    }
+
+    .main {
+        grid-template-columns: 330px;
+        grid-template-rows: auto;
+    }
+
+    .main__card {
+        max-width: 330px;
+        height: auto;
+
+        & > div {
+            height: auto;
+        }
+    }
+
+    .main__card_personal {
+        & .card-personal__personal-info {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            justify-content: space-between;
+
+            & > div {
+                margin: 0;
+                height: auto;
+            }
+
+            & .card-personal__name {
+                font-size: 30px;
+            }
+        }
+
+        & .card-personal__filters {
+            display: flex;
+            justify-content: space-around;
+            padding-inline-start: 0;
+        }
+    }
+
+    & .card__time-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 }
